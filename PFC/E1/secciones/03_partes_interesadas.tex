@@ -1,9 +1,3 @@
-% Seccion 3 del PFC E1. Fragmento para incluir con \input.
-% Requiere en el preambulo: \usepackage{longtable,array}
-% Valoraciones analiticas preliminares: deben contrastarse con la organizacion.
-\section{Partes interesadas}
-\label{sec:partes-interesadas}
-
 El proyecto propone un sistema para el gimnasio universitario, adscrito a la Unidad de Bienestar Universitario (UBU). El alcance considerado para esta entrega comprende el registro de entradas y salidas, la reserva de horarios y la solicitud de rutinas de entrenamiento mediante un chatbot, sujetas a revision humana antes de su aprobacion. El acceso al gimnasio es gratuito; por tanto, no se contemplan roles vinculados con cobro de membresias.
 
 Se identificaron ocho partes interesadas por su funcion y relacion con los procesos del gimnasio. Los codigos PI-01 a PI-08 corresponden a roles o unidades, no a nombres de personas. La columna de respaldo distingue informacion comunicada por el equipo y actividades de levantamiento previstas; una entrevista o cuestionario planificado no se presenta como ejecutado.
@@ -56,6 +50,21 @@ PI-08 & Autorizacion institucional, recursos y supervison del servicio. & Alto &
 
 \subsection{Matriz poder--interes y estrategias de participacion}
 La matriz editable se conserva como \texttt{modelos/matriz\_poder\_interes.drawio}. La asignacion que se muestra a continuacion reproduce la clasificacion de trabajo utilizada para preparar el diagrama, pendiente de validacion con los participantes.
+
+\IfFileExists{figuras/matriz_poder_interes.png}{
+  La Figura~\ref{fig:matriz-poder-interes} representa graficamente la
+  clasificacion de las partes interesadas segun su poder e interes.
+  \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{figuras/matriz_poder_interes.png}
+    \caption{Matriz poder--interes de las partes interesadas}
+    \label{fig:matriz-poder-interes}
+  \end{figure}
+}{
+  \noindent\textit{Figura pendiente de integrar: exportar la matriz a
+  \texttt{figuras/matriz\_poder\_interes.png}.}
+}
+
 
 \begingroup
 \small
