@@ -1,0 +1,40 @@
+
+# Archivos temporales de LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.run.xml
+*.bcf
+*.blg
+*.bbl
+*.nav
+*.snm
+*.vrb
+*.xdv
+
+# Archivos temporales de editores
+*.bak
+*.tmp
+*.swp
+*~
+.vscode/
+.idea/
+
+# Archivos temporales de Python
+__pycache__/
+*.pyc
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Importante:
+# NO ignorar los PDF finales del proyecto.
+# main.pdf debe incluirse en el repositorio.
