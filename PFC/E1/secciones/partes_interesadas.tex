@@ -1,0 +1,86 @@
+% Seccion 3 del PFC E1. Fragmento para incluir con \input.
+% Requiere en el preambulo: \usepackage{longtable,array}
+% Valoraciones analiticas preliminares: deben contrastarse con la organizacion.
+\section{Partes interesadas}
+\label{sec:partes-interesadas}
+
+El proyecto propone un sistema para el gimnasio universitario, adscrito a la Unidad de Bienestar Universitario (UBU). El alcance considerado para esta entrega comprende el registro de entradas y salidas, la reserva de horarios y la solicitud de rutinas de entrenamiento mediante un chatbot, sujetas a revision humana antes de su aprobacion. El acceso al gimnasio es gratuito; por tanto, no se contemplan roles vinculados con cobro de membresias.
+
+Se identificaron ocho partes interesadas por su funcion y relacion con los procesos del gimnasio. Los codigos PI-01 a PI-08 corresponden a roles o unidades, no a nombres de personas. La columna de respaldo distingue informacion comunicada por el equipo y actividades de levantamiento previstas; una entrevista o cuestionario planificado no se presenta como ejecutado.
+
+\subsection{Identificacion de las partes interesadas}
+\begingroup
+\small
+\renewcommand{\arraystretch}{1.18}
+\begin{longtable}{|p{1.1cm}|p{4.0cm}|p{8.1cm}|}
+\caption{Identificacion y respaldo de las partes interesadas}\label{tab:identificacion-pi}\\\hline
+\textbf{Codigo} & \textbf{Rol} & \textbf{Respaldo indicado por el equipo} \\ \hline
+\endfirsthead
+\hline \textbf{Codigo} & \textbf{Rol} & \textbf{Respaldo indicado por el equipo} \\ \hline
+\endhead
+PI-01 & Responsable del gimnasio en UBU & Firma del acta y primer contacto con la organizacion, segun el equipo. \\ \hline
+PI-02 & Encargado del gimnasio & Observacion del funcionamiento del gimnasio; entrevista prevista con este rol. \\ \hline
+PI-03 & Estudiantes usuarios & Observacion y cuestionario previsto para los usuarios. \\ \hline
+PI-04 & Docentes usuarios & Cuestionario previsto; corresponde confirmar participacion efectiva. \\ \hline
+PI-05 & Personal administrativo usuario & Cuestionario previsto; corresponde confirmar participacion efectiva. \\ \hline
+PI-06 & Departamento de TICs de la UTEQ & Entrega de la hoja de inscripcion, segun la informacion del equipo. \\ \hline
+PI-07 & Personal de mantenimiento y limpieza del gimnasio & Responsabilidad sobre el mantenimiento de las instalaciones, segun el equipo. \\ \hline
+PI-08 & Direccion de Bienestar Universitario & Instancia vinculada con la aprobacion del uso del sistema y de recursos, segun el equipo. \\ \hline
+\end{longtable}
+\endgroup
+
+\subsection{Interes, influencia y disponibilidad}
+Para el analisis se entiende por \emph{interes} el grado en que el resultado del proyecto afecta o beneficia al rol, y por \emph{poder} su capacidad de influir en decisiones sobre el sistema. Las clasificaciones y disponibilidades siguientes son \textbf{estimaciones de trabajo}, no resultados verificados de entrevistas. Se ajustaran cuando se confirme la participacion de la organizacion.
+
+\begingroup
+\footnotesize
+\renewcommand{\arraystretch}{1.18}
+\begin{longtable}{|p{1.0cm}|p{4.65cm}|p{1.2cm}|p{1.25cm}|p{4.65cm}|}
+\caption{Analisis preliminar de las partes interesadas}\label{tab:analisis-pi}\\\hline
+\textbf{PI} & \textbf{Interes concreto en el sistema} & \textbf{Poder} & \textbf{Interes} & \textbf{Disponibilidad para participar} \\ \hline
+\endfirsthead
+\hline \textbf{PI} & \textbf{Interes concreto en el sistema} & \textbf{Poder} & \textbf{Interes} & \textbf{Disponibilidad para participar} \\ \hline
+\endhead
+PI-01 & Control y seguimiento del servicio; coherencia con procedimientos institucionales. & Alto & Alto & Por acordar una reunion con la responsable de UBU. \\ \hline
+PI-02 & Registro agil de entradas y salidas; gestion operativa de reservas y aforo. & Bajo* & Alto & Entrevista y observacion por programar o documentar. \\ \hline
+PI-03 & Reservar horarios, conocer su disponibilidad y solicitar rutinas revisadas. & Bajo & Alto & Cuestionario por aplicar; seleccionar estudiantes usuarios. \\ \hline
+PI-04 & Acceder a horarios y reservas, si el servicio incluye docentes. & Bajo & Alto & Cuestionario por aplicar; verificar elegibilidad. \\ \hline
+PI-05 & Acceder al servicio y reservar, si el gimnasio admite personal administrativo. & Bajo & Alto & Cuestionario por aplicar; verificar elegibilidad. \\ \hline
+PI-06 & Compatibilidad del nuevo registro con la hoja de inscripcion existente; alcance de su participacion por verificar. & Alto* & Bajo* & Consulta documental o contacto puntual por coordinar. \\ \hline
+PI-07 & Informacion sobre ocupacion y horarios cuando afecte labores de limpieza y mantenimiento. & Bajo & Bajo & Consulta breve por coordinar segun turnos de trabajo. \\ \hline
+PI-08 & Autorizacion institucional, recursos y supervison del servicio. & Alto & Alto & Reunion o validacion institucional por coordinar. \\ \hline
+\end{longtable}
+\endgroup
+
+\noindent\textit{Nota:} El poder bajo asignado a PI-02 se refiere provisionalmente a decisiones institucionales, no a su conocimiento de la operacion. Si decide los procedimientos del gimnasio, se debe reclasificar. Asimismo, el poder e interes de PI-06 se deben contrastar con la funcion real de TIC: entregar la hoja de inscripcion no implica por si solo poder alto sobre el sistema.
+
+\subsection{Matriz poder--interes y estrategias de participacion}
+La matriz editable se conserva como \texttt{modelos/matriz\_poder\_interes.drawio}. La asignacion que se muestra a continuacion reproduce la clasificacion de trabajo utilizada para preparar el diagrama, pendiente de validacion con los participantes.
+
+\begingroup
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{longtable}{|p{3.15cm}|p{2.2cm}|p{7.85cm}|}
+\caption{Cuadrantes y acciones de gestion de las partes interesadas}\label{tab:estrategias-pi}\\\hline
+\textbf{Cuadrante} & \textbf{Codigos} & \textbf{Estrategia de participacion propuesta} \\ \hline
+\endfirsthead
+\hline \textbf{Cuadrante} & \textbf{Codigos} & \textbf{Estrategia de participacion propuesta} \\ \hline
+\endhead
+Gestionar de cerca & PI-01, PI-08 & Validar vision, alcance, autorizaciones y decisiones que afecten las operaciones del gimnasio; solicitar retroalimentacion sobre entregables clave. \\ \hline
+Mantener satisfechos & PI-06 & Consultar requisitos del formulario de inscripcion y restricciones de intercambio de informacion, sin atribuir a TIC funciones de mantenimiento del software que no han sido confirmadas. \\ \hline
+Mantener informados & PI-02, PI-03, PI-04, PI-05 & Observar el proceso de registro, entrevistar al encargado y aplicar cuestionarios a usuarios pertinentes; informar cambios en reservas y uso del servicio. \\ \hline
+Monitorear & PI-07 & Consultar posibles efectos de las reservas y ocupacion en tareas de mantenimiento, y mantener un canal de consulta cuando cambien los horarios. \\ \hline
+\end{longtable}
+\endgroup
+
+\subsection{Trazabilidad con la elicitacion}
+Se plantea la entrevista al encargado del gimnasio (PI-02) para conocer los pasos de registro de ingreso y salida y las reglas de reserva. La observacion permitira contrastar lo declarado con el proceso efectivamente aplicado. Los cuestionarios a PI-03, PI-04 y PI-05 buscaran identificar necesidades, horarios frecuentes y dificultades al usar el servicio; antes de aplicarlos se confirmara que docentes y personal administrativo pueden acceder al gimnasio. Con PI-01 y PI-08 se proponen reuniones de validacion para delimitar decisiones y autorizaciones. Para PI-06 y PI-07 se proponen consultas puntuales, ajustadas a su relacion con el proceso. Estas actividades son un \textbf{plan}, no evidencia de sesiones ya realizadas.
+
+\subsection{Asuntos que requieren validacion}
+\begin{itemize}
+  \item Confirmar si el encargado PI-02 tambien desempe\~na el rol de entrenador o si existe otro rol encargado de revisar las rutinas generadas por el chatbot. La aprobacion de rutinas no debe quedar sin responsable identificado.
+  \item Confirmar si docentes (PI-04) y personal administrativo (PI-05) pueden reservar horarios y bajo que condiciones.
+  \item Verificar si PI-06 intervendra en el software futuro o solo en la hoja de inscripcion del proceso actual.
+  \item Confirmar el poder de decision real de PI-02 y PI-06 para actualizar la matriz.
+  \item Vincular cada afirmacion obtenida en campo con una evidencia real y anonimizada, conforme a las reglas de la actividad.
+\end{itemize}

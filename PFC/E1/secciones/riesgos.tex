@@ -1,0 +1,48 @@
+% Registro inicial de riesgos del PFC E1. Fragmento para incluir con \input.
+% Requiere en el preambulo: \usepackage{longtable,array}
+\section{Registro de riesgos del proyecto}
+\label{sec:riesgos}
+
+El registro presenta eventos que \textbf{podrian} afectar la elicitacion, el desarrollo o el uso del sistema propuesto para el gimnasio universitario. Su inclusion no significa que hayan ocurrido. Las probabilidades y los impactos son estimaciones cualitativas preliminares; deberan revisarse con el equipo y los representantes de la organizacion. La prioridad se interpreta combinando probabilidad e impacto, sin presentar una escala numerica como si existieran datos historicos.
+
+\begingroup
+\footnotesize
+\renewcommand{\arraystretch}{1.16}
+\begin{longtable}{|p{0.85cm}|p{4.1cm}|p{3.7cm}|p{3.35cm}|p{1.0cm}|p{1.0cm}|}
+\caption{Identificacion y evaluacion inicial de riesgos}\label{tab:identificacion-riesgos}\\\hline
+\textbf{ID} & \textbf{Riesgo} & \textbf{Causa posible} & \textbf{Consecuencia} & \textbf{Prob.} & \textbf{Imp.} \\ \hline
+\endfirsthead
+\hline \textbf{ID} & \textbf{Riesgo} & \textbf{Causa posible} & \textbf{Consecuencia} & \textbf{Prob.} & \textbf{Imp.} \\ \hline
+\endhead
+R-01 & Dificultad para entrevistar al encargado o a la responsable de UBU. & Horarios de trabajo y disponibilidad limitada. & Requisitos incompletos o retraso del levantamiento. & Media & Alto \\ \hline
+R-02 & Interpretacion incorrecta del procedimiento actual de registro e inscripcion. & Informacion fragmentada entre observacion y hoja de inscripcion. & Datos o pasos omitidos en el sistema. & Media & Alto \\ \hline
+R-03 & Reservas duplicadas o superiores a la capacidad permitida. & Reglas de cupos, franjas y cancelaciones no definidas. & Sobreocupacion y conflictos entre usuarios. & Media & Alto \\ \hline
+R-04 & Uso de una rutina inadecuada sugerida por el chatbot. & Falta de flujo de revision o criterios de aprobacion del entrenador. & Riesgo para el bienestar del usuario y perdida de confianza. & Media & Alto \\ \hline
+R-05 & Acceso o divulgacion no autorizada de datos de asistencia y rutinas. & Permisos insuficientes o tratamiento inadecuado de la informacion. & Afectacion de privacidad y cumplimiento normativo. & Media & Alto \\ \hline
+R-06 & Participacion insuficiente de docentes y personal administrativo. & No confirmar si son usuarios autorizados o si responderan los cuestionarios. & Alcance y necesidades de uso mal definidos. & Media & Medio \\ \hline
+R-07 & Diferencias entre las autorizaciones de UBU y las reglas operativas del gimnasio. & Falta de validacion entre PI-01, PI-02 y PI-08. & Retrabajo y decisiones contradictorias. & Media & Alto \\ \hline
+R-08 & Integracion insuficiente de aportes del equipo antes del cierre. & Cambios no coordinados entre archivos, diagrama y documentos LaTeX. & Entrega inconsistente o errores de compilacion. & Media & Alto \\ \hline
+\end{longtable}
+\endgroup
+
+\begingroup
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{longtable}{|p{1.0cm}|p{9.0cm}|p{3.05cm}|}
+\caption{Respuestas, seguimiento y responsables propuestos}\label{tab:respuesta-riesgos}\\\hline
+\textbf{ID} & \textbf{Prevencion, mitigacion y respuesta} & \textbf{Responsable de seguimiento} \\ \hline
+\endfirsthead
+\hline \textbf{ID} & \textbf{Prevencion, mitigacion y respuesta} & \textbf{Responsable de seguimiento} \\ \hline
+\endhead
+R-01 & Solicitar reuniones con antelacion, preparar preguntas concisas y dejar constancia de las sesiones que realmente se realicen; reprogramar si es necesario. & Equipo de elicitacion \\ \hline
+R-02 & Contrastar entrevista, observacion y hoja de inscripcion; documentar discrepancias y validar el flujo con PI-02 antes de especificarlo. & Analista de requisitos \\ \hline
+R-03 & Elicitar cupos por franja, solapamientos, plazos y reglas de cancelacion; verificar casos limite antes de implementar la logica de reservas. & Equipo de requisitos y desarrollo \\ \hline
+R-04 & Definir estados \emph{pendiente de revision}, \emph{aprobada} y \emph{rechazada}; impedir presentar una rutina como aprobada sin validacion del entrenador identificado; establecer controles humanos y limites de uso. & Encargado de requisitos; entrenador por confirmar \\ \hline
+R-05 & Minimizar datos recopilados, definir perfiles de acceso, proteger credenciales y acordar conservacion de datos; no publicar datos personales en GitHub. & Equipo del proyecto y responsable institucional \\ \hline
+R-06 & Verificar con UBU quienes pueden utilizar el gimnasio; seleccionar encuestados reales y ajustar requisitos si un grupo no esta autorizado. & Equipo de elicitacion \\ \hline
+R-07 & Registrar acuerdos y decisiones; solicitar validacion de reglas operativas y autorizaciones a los roles que correspondan. & Coordinacion del equipo \\ \hline
+R-08 & Definir codigos y nombres de archivo comunes, revisar cambios con \texttt{git status}, integrar de forma gradual y comprobar la compilacion del documento antes de entregar. & Integrador y responsables de cada seccion \\ \hline
+\end{longtable}
+\endgroup
+
+\noindent\textbf{Seguimiento.} En las reuniones del equipo se revisara si cada riesgo sigue vigente, si su probabilidad o impacto cambiaron, quien ejecutara la accion y que evidencia respalda su cierre. Los responsables de seguimiento indicados son funciones propuestas y deben asignarse a integrantes concretos del proyecto. Hasta que exista evidencia, ningun riesgo se marcara como materializado o cerrado.
