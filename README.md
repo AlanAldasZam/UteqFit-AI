@@ -2,6 +2,13 @@
 
 Repositorio grupal de Ingeniería de Requerimientos (ISR-401), UTEQ, periodo académico 2026-2027 SPA.
 
+## Integrantes
+
+- Aldas Zambrano Alan Andrés
+- Briones Solorzano William Adrian
+- Lavayen Bone Cristopher Javier
+- Monserrate Ochoa Erick Ariel
+
 ## Estructura del repositorio
 
 ```text
@@ -31,7 +38,7 @@ Algunos archivos y carpetas se incorporarán conforme avance la entrega.
 ### Compilador y dependencias
 
 - Compilador: pdfLaTeX (MiKTeX 25.12).
-- Bibliografía: Biber 2.21, cuando se configure `biblatex`.
+- Bibliografía: BibTeX con el estilo `IEEEtran` (paquete `ieeetran` de MiKTeX); las referencias están en `referencias.bib`.
 - Paquetes LaTeX: los declarados en `main.tex`, instalados mediante MiKTeX.
 
 ### Orden de compilación
@@ -40,21 +47,12 @@ Desde la carpeta `PFC/E1`:
 
 ```bash
 pdflatex main.tex
-pdflatex main.tex
-```
-
-Cuando se incorporen las referencias mediante `biblatex` y Biber:
-
-```bash
-pdflatex main.tex
-biber main
+bibtex main
 pdflatex main.tex
 pdflatex main.tex
 ```
 
-El resultado será `PFC/E1/main.pdf`.
-
-**Nota:** los comandos deberán comprobarse con la versión definitiva de `main.tex`.
+El resultado es `PFC/E1/main.pdf`.
 
 ## Archivos de la entrega
 
