@@ -1,0 +1,153 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla,es-nodecimaldot]{babel}
+\usepackage{lmodern}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{pdfpages}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,shapes.geometric}
+\usepackage{fancyhdr}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={TA-PFC-E1 - UteqFit-AI: visión, alcance, partes interesadas, contexto y plan de elicitación},
+  pdfauthor={Aldas Zambrano A., Briones Solorzano W., Lavayen Bone C., Monserrate Ochoa E.},
+  pdfsubject={Ingeniería de Requerimientos (ISR-401) - UTEQ},
+  pdfkeywords={ingeniería de requisitos, elicitación, partes interesadas, UteqFit-AI}
+}
+
+% Encabezado y pie de página
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small ISR-401 \textperiodcentered{} TA-PFC-E1}
+\fancyhead[R]{\small UteqFit-AI}
+\fancyfoot[C]{\small \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{14pt}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\small \thepage}\renewcommand{\headrulewidth}{0pt}}
+
+% Evita líneas que se salen del margen
+\setlength{\emergencystretch}{2em}
+
+% Rutas: compila igual desde PFC/E1 (local) o desde la raíz del proyecto (Overleaf)
+\IfFileExists{PFC/E1/main.tex}{\def\rutaE{PFC/E1/}}{\def\rutaE{}}
+\makeatletter
+\def\input@path{{\rutaE}}
+\makeatother
+\graphicspath{{\rutaE}{\rutaE figuras/}}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+% Marca de contenido por completar. Antes de la entrega final no debe quedar ninguna:
+%   grep -rn "pendiente" PFC/E1
+\newcommand{\pendiente}[1]{\textcolor{red}{[PENDIENTE: #1]}}
+
+% Incluye un archivo si ya existe; si no, deja un aviso y el documento compila igual
+\newcommand{\incluir}[1]{\IfFileExists{\rutaE #1.tex}{\input{#1}}{\pendiente{falta subir el archivo \texttt{\detokenize{#1}.tex}}}}
+
+\newcommand{\sistema}{UteqFit-AI}
+\newcommand{\organizacion}{Gimnasio Universitario de la Unidad de Bienestar Universitario (UBU) de la UTEQ}
+\newcommand{\repourl}{https://github.com/AlanAldasZam/UteqFit-AI}
+
+\begin{document}
+
+% ---------------- Portada ----------------
+\begin{titlepage}
+  \centering
+  {\large\bfseries Universidad Técnica Estatal de Quevedo\par}
+  {Facultad de Ciencias de la Computación\par}
+  {Carrera de Software\par}
+  \vspace{2.5cm}
+  {Ingeniería de Requerimientos (ISR-401)\par}
+  {4.\textsuperscript{o} nivel \textperiodcentered{} Paralelo A \textperiodcentered{} Período SPA 2026--2027\par}
+  \vspace{2.5cm}
+  {\Large\bfseries Proyecto Fin de Curso -- Entrega 1\par}
+  \vspace{0.3cm}
+  {\large Visión, alcance, partes interesadas, contexto y plan de elicitación\par}
+  \vspace{0.3cm}
+  {\large Proyecto: \sistema\par}
+  \vspace{2cm}
+  {\bfseries Integrantes\par}
+  Aldas Zambrano Alan Andrés\par
+  Briones Solorzano William Adrian\par
+  Lavayen Bone Cristopher Javier\par
+  Monserrate Ochoa Erick Ariel\par
+  \vspace{1.5cm}
+  {\bfseries Docente\par}
+  Gleiston Cicerón Guerrero Ulloa, PhD\par
+  \vfill
+  Repositorio: \url{\repourl}\par
+  \vspace{0.3cm}
+  Código de la tarea: TA-PFC-E1\par
+  Quevedo, noviembre de 2026\par
+\end{titlepage}
+
+\tableofcontents
+\listoftables
+\listoffigures
+\clearpage
+
+% ---------------- Cuerpo (7 secciones de la guía) ----------------
+\section{Organización real}\label{sec:organizacion}
+\incluir{secciones/01_organizacion}
+
+\section{Visión y alcance}\label{sec:vision}
+\incluir{secciones/02_vision_alcance}
+
+\section{Partes interesadas}\label{sec:partes}
+\incluir{secciones/03_partes_interesadas}
+
+\section{Contexto}\label{sec:contexto}
+\incluir{secciones/04_contexto}
+
+\section{Plan de elicitación}\label{sec:elicitacion}
+\incluir{secciones/05_plan_elicitacion}
+
+\section{Ética y datos}\label{sec:etica}
+\incluir{secciones/06_etica_datos}
+
+\section{Gestión del proyecto}\label{sec:gestion}
+\incluir{secciones/07_gestion_proyecto}
+\incluir{secciones/08_riesgos}
+
+\section*{Declaración de uso de inteligencia artificial}\label{sec:ia}
+\addcontentsline{toc}{section}{Declaración de uso de inteligencia artificial}
+\incluir{secciones/09_declaracion_ia}
+
+\bibliographystyle{IEEEtran}
+\bibliography{\rutaE referencias}
+
+% ---------------- Anexos ----------------
+\clearpage
+\appendix
+\section{Guion de entrevista}\label{anx:entrevista}
+\incluir{instrumentos/guion_entrevista}
+
+\section{Cuestionario}\label{anx:cuestionario}
+\incluir{instrumentos/cuestionario}
+
+\section{Guía de observación}\label{anx:observacion}
+\incluir{instrumentos/guia_observacion}
+
+% El consentimiento se inserta como PDF cuando ya fue compilado en instrumentos/
+\IfFileExists{\rutaE instrumentos/Consentimiento_Informado_PFC_ISR401.pdf}{%
+  \includepdf[pages=-, pagecommand={\thispagestyle{empty}}, addtotoc={1,section,1,Modelo de consentimiento informado,anx:consentimiento}]{\rutaE instrumentos/Consentimiento_Informado_PFC_ISR401.pdf}%
+}{%
+  \section{Modelo de consentimiento informado}\label{anx:consentimiento}
+  \pendiente{compilar instrumentos/Consentimiento\_Informado\_PFC\_ISR401.tex}%
+}
+
+\end{document}
