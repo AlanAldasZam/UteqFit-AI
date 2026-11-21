@@ -1,0 +1,121 @@
+% Cuestionario para usuarios del Gimnasio Universitario (UBU)
+\newcommand{\op}[1]{$\square$~#1}
+
+\begin{table}[H]
+  \centering\small
+  \caption{Datos generales del cuestionario.}\label{tab:datos-cuestionario}
+  \begin{tabularx}{\textwidth}{@{}lL@{}}
+    \toprule
+    Campo & Detalle \\
+    \midrule
+    Proyecto & \sistema \\
+    Dirigido a & Usuarios del Gimnasio Universitario: estudiantes, docentes y administrativos -- PI-03, PI-04 y PI-05 \\
+    Objetivo & Conocer la experiencia de los usuarios con el trámite de inscripción, los horarios y cupos, y la forma en que realizan su entrenamiento. \\
+    Medio & Google Forms institucional (cuenta @uteq.edu.ec), sin recopilar correos electrónicos \\
+    Respuestas esperadas & \pendiente{meta de respuestas} \\
+    Tiempo estimado & 5 minutos \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\noindent\fbox{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{\small
+\textbf{Instrucciones.} Este cuestionario forma parte del proyecto académico \sistema{} de la asignatura Ingeniería de Requerimientos (ISR-401) de la UTEQ. Su propósito es conocer la experiencia de los usuarios respecto al trámite de inscripción, el uso de los horarios y el entrenamiento en el Gimnasio Universitario. La participación es voluntaria y anónima: no se solicitan nombres, número de cédula, correo ni datos médicos. Puede dejar de responder en cualquier momento. Las respuestas se usarán únicamente con fines académicos. Marque una sola opción, salvo que la pregunta indique lo contrario.}}
+
+\subsection*{Sección A: Perfil}
+\begin{enumerate}[label=C\arabic*., series=cuest, leftmargin=*]
+  \item ¿Cuál es su relación con la UTEQ?\\[0.3em]
+  \op{Estudiante}\quad \op{Docente}\quad \op{Administrativo}\quad \op{Otro: \rule{2.5cm}{0.4pt}}
+
+  \item ¿Cuánto tiempo lleva utilizando el Gimnasio Universitario?\\[0.3em]
+  \op{Menos de un semestre}\quad \op{1 a 2 semestres}\quad \op{Más de 2 semestres}\\
+  \op{Nunca he asistido} \emph{(pase a la pregunta C13)}
+\end{enumerate}
+
+\subsection*{Sección B: Inscripción}
+\begin{enumerate}[resume*=cuest]
+  \item ¿Qué tan fácil le resultó inscribirse en el gimnasio?\\[0.3em]
+  \begin{tabular}{@{}lccccc l@{}}
+    & 1 & 2 & 3 & 4 & 5 & \\
+    Muy difícil & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ & Muy fácil
+  \end{tabular}
+
+  \item ¿Cuánto tiempo le tomó completar el trámite de inscripción?\\[0.3em]
+  \op{El mismo día}\quad \op{1 a 3 días}\quad \op{Más de 3 días}\quad \op{No completé el trámite}\quad \op{No recuerdo}
+
+  \item ¿Qué parte del proceso de inscripción le resultó más complicada? \emph{(Puede marcar más de una opción)}
+    \begin{itemize}[label={}, leftmargin=0pt, itemsep=0pt]
+    \item \op{Retirar la hoja de inscripción en TICs}
+    \item \op{Llenar los datos solicitados en la ficha}
+    \item \op{Entregar la ficha en el gimnasio o en Bienestar Universitario}
+    \item \op{Confirmar si había cupo en el horario elegido}
+    \item \op{Ninguna, el proceso fue sencillo}
+    \item \op{Otro: \rule{2.2cm}{0.4pt}}
+  \end{itemize}
+\end{enumerate}
+
+\subsection*{Sección C: Horarios y cupos}
+\begin{enumerate}[resume*=cuest]
+  \item ¿En qué franja horaria entrena habitualmente?\\[0.3em]
+  \op{Mañana (08h00 a 12h00)}\quad \op{Tarde (12h00 a 17h50)}\quad \op{Varía según el día}\\
+  \op{No entreno actualmente}\quad \op{Otro: \rule{2.5cm}{0.4pt}}
+
+  \item ¿Cuántos días a la semana asiste normalmente al gimnasio?\\[0.3em]
+  \op{1 día}\quad \op{2 días}\quad \op{3 días}\quad \op{4 días}\quad \op{5 días}
+
+  \item ¿Con qué frecuencia se ha quedado sin cupo en el horario en que deseaba entrenar?\\[0.3em]
+  \op{Nunca}\quad \op{Rara vez}\quad \op{Algunas veces}\quad \op{Frecuentemente}\quad \op{Siempre}
+
+  \item Cuando un horario ya no tiene cupo, ¿cómo se entera principalmente?
+  \begin{multicols}{2}
+  \begin{itemize}[label={}, leftmargin=0pt, itemsep=0pt]
+    \item \op{Al llegar al gimnasio}
+    \item \op{Por aviso directo del encargado}
+    \item \op{Por comentarios de otros compañeros}
+    \item \op{Por correo o redes institucionales}
+    \item \op{Nunca me ha ocurrido}
+    \item \op{Otro: \rule{2.2cm}{0.4pt}}
+  \end{itemize}
+  \end{multicols}
+
+  \item ¿Qué tan satisfecho está con la organización actual de los horarios y cupos?\\[0.3em]
+  \begin{tabular}{@{}lccccc l@{}}
+    & 1 & 2 & 3 & 4 & 5 & \\
+    Muy insatisfecho & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ & Muy satisfecho
+  \end{tabular}
+\end{enumerate}
+
+\subsection*{Sección D: Entrenamiento}
+\begin{enumerate}[resume*=cuest]
+  \item ¿Cómo obtiene principalmente la rutina de ejercicios que realiza?
+  \begin{multicols}{2}
+  \begin{itemize}[label={}, leftmargin=0pt, itemsep=0pt]
+    \item \op{Me la indica el encargado}
+    \item \op{La busco en internet o aplicaciones}
+    \item \op{Me la comparte un compañero}
+    \item \op{No sigo una rutina definida}
+    \item \op{Otro: \rule{2.2cm}{0.4pt}}
+  \end{itemize}
+  \end{multicols}
+
+  \item Cuando no sabe cómo usar una máquina o equipo, ¿a quién acude principalmente?
+  \begin{multicols}{2}
+  \begin{itemize}[label={}, leftmargin=0pt, itemsep=0pt]
+    \item \op{Al encargado del gimnasio}
+    \item \op{A otro usuario que esté entrenando}
+    \item \op{Busco instrucciones en el celular}
+    \item \op{Prefiero no usar esa máquina}
+    \item \op{Nunca he tenido esa duda}
+    \item \op{Otro: \rule{2.2cm}{0.4pt}}
+  \end{itemize}
+  \end{multicols}
+\end{enumerate}
+
+\subsection*{Pregunta final}
+\begin{enumerate}[resume*=cuest]
+  \item ¿Qué le gustaría que mejore en el Gimnasio Universitario?\\[0.8em]
+  \rule{\linewidth}{0.4pt}\\[0.8em]
+  \rule{\linewidth}{0.4pt}\\[0.8em]
+  \rule{\linewidth}{0.4pt}
+\end{enumerate}
+
+\begin{center}\small\emph{Gracias por su participación.}\end{center}
