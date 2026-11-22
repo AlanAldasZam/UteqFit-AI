@@ -1,7 +1,56 @@
-% Seccion 1 del PFC E1 (Alan). El titulo de la seccion ya esta en main.tex.
+El proyecto \textit{UteqFit-AI} se desarrolla en el Gimnasio Universitario de la Universidad Técnica Estatal de Quevedo (UTEQ), ubicado en el campus central del cantón Quevedo, provincia de Los Ríos. Conforme a la norma ISO/IEC/IEEE 29148:2018, antes de especificar requisitos se delimita el entorno organizacional, los límites del sistema y las restricciones operativas en las que funcionará la solución~\cite{iso29148}.
 
-El gimnasio queda cerca de Bienestar Universitario y depende de él. Hay un encargado y no hay entrenador.
+\subsection{Identificación y ubicación}
 
-Según el afiche del gimnasio, está en el campus central y atiende de 08h00 a 13h00 en la mañana y de 15h00 a 18h00 en la tarde. Es para los estudiantes de la UTEQ.
+El Gimnasio Universitario es una unidad adscrita a la Unidad de Bienestar Universitario (UBU) de la UTEQ. En la Tabla~\ref{tab:ficha_organizacion} se resumen los datos principales de la unidad, recopilados a partir del afiche informativo del local y de la observación realizada el 18 de noviembre de 2026.
 
-Para inscribirse, primero hay que ir a TICs, que entrega la hoja de inscripción, y después se llena en el gimnasio. Todo se hace a mano. Para entrar hay que presentar la cédula o el carné universitario y registrar el ingreso en recepción.
+\begin{table}[htbp]
+    \centering
+    \caption{Ficha de identificación de la organización.}
+    \label{tab:ficha_organizacion}
+    \begin{tabular}{p{0.32\linewidth} p{0.60\linewidth}}
+        \hline
+        \textbf{Atributo} & \textbf{Detalle} \\
+        \hline
+        Institución & Universidad Técnica Estatal de Quevedo (UTEQ) \\
+        Dependencia & Unidad de Bienestar Universitario (UBU) \\
+        Unidad estudiada & Gimnasio Universitario \\
+        Ubicación & Campus Central, cantón Quevedo, provincia de Los Ríos \\
+        Horario de atención & De 08h00 a 13h00 y de 15h00 a 18h00 (según el afiche informativo) \\
+        Personal en sala & Un encargado operativo (no dispone de entrenador) \\
+        Aforo máximo & 26 usuarios por hora \\
+        Fuentes de evidencia & Consentimiento informado (\texttt{E-01} en \texttt{MANIFIESTO.md}) y registro de observaciones \texttt{O1}--\texttt{O6} (\texttt{evidencias/registro\_observacion\_01.md}) \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Funcionamiento actual}
+
+De acuerdo con la información recabada en la unidad y las observaciones registradas en \texttt{evidencias/registro\_observacion\_01.md} (\texttt{O1} a \texttt{O6}), la operación diaria presenta las siguientes características:
+
+\begin{itemize}
+    \item \textbf{Inscripción previa en TICs:} Para registrarse como usuario del gimnasio, la persona debe acudir primero a la unidad de TICs, donde el trámite se realiza de forma manual (\texttt{O1}).
+    \item \textbf{Registro de ingreso en recepción:} Al acudir al gimnasio dentro de las franjas de atención (08h00 a 13h00 y 15h00 a 18h00, según el afiche informativo), el usuario presenta su cédula de identidad o carné universitario y se anota en el registro de recepción.
+    \item \textbf{Control de aforo por hora:} El espacio admite un cupo máximo de 26 personas por hora. En la observación del 18 de noviembre se verificó que se alcanzó el límite de 26 usuarios entre las 09h00 y las 09h30 (\texttt{O2}).
+    \item \textbf{Uso compartido y estado del equipamiento:} Durante la jornada los usuarios comparten las máquinas disponibles (\texttt{O4}); los equipos son nuevos y no presentaron fallas durante la observación (\texttt{O6}).
+    \item \textbf{Supervisión en sala:} La atención está a cargo de un único encargado operativo y no existe entrenador asignado (\texttt{O5}).
+\end{itemize}
+
+\subsection{Problemas identificados en campo}
+
+Del contraste entre las normas de funcionamiento y lo observado en sala se identifican cuatro problemas concretos:
+
+\begin{enumerate}
+    \item \textbf{Trámite de inscripción manual y separado:} La exigencia de acudir previamente a TICs para un registro manual (\texttt{O1}) desvincula la habilitación del usuario respecto al control diario que se lleva en recepción.
+    \item \textbf{Límite de aforo alcanzado en hora pico:} El cupo de 26 personas por hora se completó entre las 09h00 y las 09h30 (\texttt{O2}). Aunque ninguna persona se quedó sin ingresar durante ese intervalo de observación, la falta de visibilidad previa de cupos expone el servicio a rechazos en momentos de mayor afluencia.
+    \item \textbf{Permanencia fuera del turno asignado:} Se observó que algunos usuarios permanecen en la sala después de haber cumplido su hora de turno (\texttt{O3}), lo que reduce la disponibilidad efectiva de los 26 cupos para la siguiente franja.
+    \item \textbf{Demanda de orientación sin soporte técnico:} Durante la observación se registraron entre 4 y 5 solicitudes de ayuda por parte de los usuarios, pero el personal presente no cuenta con formación en planificación de rutinas ni existe un entrenador en sala (\texttt{O5}).
+\end{enumerate}
+
+La solución propuesta con \textit{UteqFit-AI} aborda la parte del problema que puede resolverse mediante software: reserva de turnos, consulta de aforo en tiempo real, avisos de finalización de turno y sugerencia básica de rutinas sujeta a revisión humana. Dado que actualmente no existe un entrenador ni personal con formación en rutinas en sala, la definición del rol institucional que asumirá dicha revisión queda pendiente por acordar con la UBU. Por su parte, la contratación de un entrenador constituye una limitación administrativa y de personal de la institución que excede el alcance del sistema informático.
+
+\subsection{Estado de autorizaciones y protección de datos}
+
+Para el levantamiento de información se cuenta con el consentimiento informado firmado el 18 de noviembre de 2026 por la delegada de la UBU (parte interesada \texttt{PI-01}, registrada con el código de participante \texttt{UTEQFIT-P01} en el formulario firmado), mediante el cual acepta participar en el estudio (\texttt{E-01}). La carta de aceptación institucional formal por parte de la dirección de la dependencia se encuentra pendiente.
+
+En cumplimiento de la Ley Orgánica de Protección de Datos Personales del Ecuador~\cite{lopdp2021}, los documentos originales con datos personales se resguardan en la carpeta institucional privada de Drive compartida con el docente, mientras que en el repositorio público se registra únicamente su inventario y huella SHA-256 en \texttt{PFC/E1/evidencias/MANIFIESTO.md}.
