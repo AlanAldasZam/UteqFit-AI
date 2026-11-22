@@ -1,7 +1,7 @@
 # Registro de observación 01 - Gimnasio Universitario (UBU)
 
 Instrumento aplicado: guía de observación (Anexo C de `main.pdf`, `instrumentos/guia_observacion.tex`).
-Las notas de campo originales están en la carpeta institucional privada y se registran en `MANIFIESTO.md`.
+Durante la observación no se conservaron notas de campo escritas; este registro fue elaborado por los dos observadores a partir de lo observado el 18/11/2026.
 
 | Campo | Detalle |
 |-------|---------|
