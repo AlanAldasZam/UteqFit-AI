@@ -1,0 +1,149 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[margin=2.2cm,top=2.6cm,bottom=2.4cm]{geometry}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage[most]{tcolorbox}
+\usepackage{url}
+\usepackage{lastpage}
+
+\definecolor{verde}{RGB}{38,96,40}
+\definecolor{dorado}{RGB}{214,160,40}
+\definecolor{azul}{RGB}{40,90,150}
+
+\graphicspath{{../figuras/}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\includegraphics[height=1.1cm]{logo_uteq.png}}
+\fancyfoot[L]{\footnotesize\color{gray!70!black}ISR-401 Ingeniería de Requisitos · Consentimiento informado · PFC-ISR401-UTEQFIT-A02}
+\fancyfoot[R]{\footnotesize\color{gray!70!black}Página \thepage\ de \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\setlength{\headheight}{36pt}
+
+\titleformat{\section}{\color{verde}\large\bfseries}{\thesection.}{0.4em}{}[{\color{dorado}\titlerule[0.6pt]}]
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\newcommand{\caja}{$\square$}
+
+\begin{document}
+
+\begin{center}
+{\small\bfseries\color{azul}FACULTAD DE CIENCIAS DE LA COMPUTACIÓN · CARRERA DE INGENIERÍA DE SOFTWARE}\\[2pt]
+{\LARGE\bfseries\color{verde}FORMULARIO DE CONSENTIMIENTO INFORMADO}\\[4pt]
+Participación voluntaria en el levantamiento de requisitos de un proyecto académico
+\end{center}
+
+\begin{tcolorbox}[colback=white,colframe=verde!60,arc=2mm,boxrule=0.5pt,left=2mm,right=2mm]
+\small
+\begin{tabularx}{\linewidth}{@{}>{\bfseries\leavevmode\color{verde}}p{4.2cm}X@{}}
+Código del documento & PFC-ISR401-UTEQFIT-A02 \quad Versión 2.0 \quad (18/11/2026) \\
+Asignatura & Ingeniería de Requisitos (ISR-401) · 4.º nivel · Paralelo A · Período 2026--2027 SPA \\
+Proyecto & UteqFit-AI --- sistema de gestión del Gimnasio Universitario (UBU) \\
+Organización estudiada & Gimnasio Universitario (UBU) de la UTEQ, cantón Quevedo, provincia de Los Ríos \\
+Docente responsable & Ing. Gleiston Cicerón Guerrero Ulloa, PhD · gguerrero@uteq.edu.ec \\
+Contacto del equipo & Aldas Zambrano Alan Andrés · aaldasz@uteq.edu.ec\newline
+Briones Solorzano William Adrian · wbrioness@uteq.edu.ec\newline
+Lavayen Bone Cristopher Javier · clavayenb@uteq.edu.ec\newline
+Monserrate Ochoa Erick Ariel · emonserrateo@uteq.edu.ec \\
+Código del participante & \textbf{UTEQFIT-P01} \\
+\end{tabularx}
+\end{tcolorbox}
+
+Usted ha sido invitado o invitada a participar en una actividad académica de la Universidad Técnica Estatal de Quevedo (UTEQ). Antes de decidir, lea con calma este documento o pida que se lo lean en voz alta. Puede hacer todas las preguntas que necesite. Firmar es opcional: si no desea participar, no tiene que dar ninguna explicación.
+
+\section{¿Para qué es este estudio?}
+Un equipo de estudiantes de Ingeniería de Software está estudiando cómo se trabaja en el Gimnasio Universitario (UBU) de la UTEQ, cantón Quevedo, provincia de Los Ríos, en particular en la inscripción y registro de usuarios, el control de acceso y asistencia, la planificación de rutinas y el seguimiento de usuarios, y la gestión y mantenimiento de equipos, con el fin de identificar, analizar y documentar los requisitos de un sistema informático (UteqFit-AI --- sistema de gestión del Gimnasio Universitario (UBU)). La información se usará como evidencia para elaborar documentos de ingeniería de requisitos: listas de requisitos, casos de uso, modelos, prototipos y registros de validación. Se trata de una propuesta académica: su participación no implica la compra, instalación ni entrega de ningún sistema a la organización.
+
+\section{¿Qué tendría que hacer?}
+Según su rol, se le pedirá una o varias de estas actividades, que el equipo le indicará antes de empezar:
+\begin{itemize}[leftmargin=*,itemsep=2pt]
+  \item Una entrevista sobre sus tareas diarias, los problemas que encuentra y las mejoras que considera necesarias (aproximadamente 15 a 45 minutos).
+  \item Responder un cuestionario breve en línea.
+  \item Permitir que un integrante del equipo observe su trabajo sin intervenir (observación no participante).
+  \item Revisar pantallas o prototipos del sistema propuesto y opinar si reflejan su trabajo (sesión de validación).
+\end{itemize}
+Lo que usted diga se registrará con notas escritas. El audio, el video y las fotografías solo se usarán si usted lo autoriza en la Sección~7. Negarse a ser grabado no le impide participar.
+
+\textbf{No se le pedirá:} historias clínicas, diagnósticos, lesiones, medidas corporales, rutinas de entrenamiento individuales ni datos de salud de usuarios identificables del gimnasio; tampoco datos financieros, contraseñas ni información de terceros que permita identificarlos.
+
+\section{Riesgos y cómo se reducen}
+La participación no implica riesgos físicos. Los riesgos posibles son sentirse incómodo al hablar de su trabajo o de problemas internos de la organización, y que la información se use de forma indebida. Para reducirlos: puede omitir cualquier pregunta, pausar o terminar la actividad cuando quiera; el equipo usará un código en lugar de su nombre; y ninguna opinión suya se comunicará a sus superiores de forma que lo identifique.
+
+\section{Beneficios}
+No recibirá pago ni beneficio económico. Su colaboración ayudará a que la propuesta de sistema responda a las necesidades reales de su trabajo y contribuirá a la formación de futuros profesionales de la Ingeniería de Software.
+
+\section{Confidencialidad y protección de sus datos}
+Sus datos personales serán tratados conforme a la Ley Orgánica de Protección de Datos Personales del Ecuador (LOPDP), que le reconoce, entre otros, los derechos de acceso, rectificación, eliminación y oposición sobre sus datos.
+\begin{itemize}[leftmargin=*,itemsep=2pt]
+  \item \textbf{Lo que nunca se publica:} su nombre, número de cédula, firma, rostro, voz, contacto ni su cargo específico. En todo documento, presentación o repositorio público usted aparecerá solo con su código de participante o con un rol genérico (por ejemplo, ``Encargado del gimnasio'').
+  \item \textbf{Dónde se guarda lo identificable:} este formulario firmado y las grabaciones originales se guardan en una carpeta privada de la cuenta institucional (@uteq.edu.ec), compartida solo con el docente responsable. En el repositorio público del proyecto (\url{https://github.com/AlanAldasZam/UteqFit-AI}) solo se publica material anonimizado.
+  \item \textbf{Cuánto tiempo:} el material identificable se conservará como máximo 24 meses desde el cierre del período académico y luego será destruido. Solo se conservarán los instrumentos en blanco y los resultados totalmente anonimizados.
+\end{itemize}
+
+\section{Participación voluntaria y derecho a retirarse}
+Su participación es libre. Puede negarse a responder cualquier pregunta y retirarse en cualquier momento, sin dar explicaciones y sin ninguna consecuencia laboral, académica ni de otro tipo. Si se retira, puede pedir que se eliminen sus datos usando el desprendible de la última página o escribiendo a los contactos indicados al inicio; se eliminarán siempre que aún no se hayan integrado en resultados agregados o anonimizados de forma irreversible. Este formulario está dirigido a personas de 18 años o más; las personas menores de edad no participan en el estudio.
+
+\clearpage
+\section{Autorizaciones específicas}
+Marque Sí o No en cada fila. Puede aceptar unas y rechazar otras; solo la primera es necesaria para participar.
+
+{\small
+\renewcommand{\arraystretch}{1.35}
+\rowcolors{2}{gray!8}{white}
+\begin{tabularx}{\linewidth}{|X|>{\centering\arraybackslash}p{1.2cm}|>{\centering\arraybackslash}p{1.2cm}|}
+\hline
+\rowcolor{verde}\textcolor{white}{\textbf{Autorización}} & \textcolor{white}{\textbf{Sí}} & \textcolor{white}{\textbf{No}} \\ \hline
+a) Acepto participar en la actividad que se me ha explicado. & \caja & \caja \\ \hline
+b) Autorizo la grabación en audio de mi participación. & \caja & \caja \\ \hline
+c) Autorizo la grabación en video de mi participación. & \caja & \caja \\ \hline
+d) Autorizo fotografías fechadas del entorno de trabajo, sin mi rostro, sin documentos legibles y sin ubicación GPS. & \caja & \caja \\ \hline
+e) Autorizo que se citen textualmente frases mías, sin datos que me identifiquen. & \caja & \caja \\ \hline
+f) Autorizo el uso de mis datos anonimizados en los trabajos académicos de la asignatura. & \caja & \caja \\ \hline
+g) Autorizo el uso de mis datos anonimizados en publicaciones académicas o científicas derivadas del proyecto. & \caja & \caja \\ \hline
+h) Autorizo el depósito de mis datos anonimizados en un repositorio abierto de datos de investigación, bajo licencia Creative Commons Atribución 4.0 Internacional (CC BY 4.0). & \caja & \caja \\ \hline
+\end{tabularx}
+}
+
+Ninguna de estas autorizaciones permite publicar datos que lo identifiquen.
+
+\section{Declaración y firmas}
+Declaro que tengo 18 años o más; que he leído este formulario, o me lo han leído; que pude hacer preguntas y recibí respuestas claras; y que comprendo el objetivo, las actividades, los riesgos, los beneficios, el manejo de mis datos y mi derecho a retirarme. Acepto participar de forma voluntaria según las opciones que marqué en la Sección~7. Se firman dos ejemplares: uno queda en mi poder y otro en el expediente restringido del proyecto.
+
+\vspace{1.4cm}
+\newcommand{\firma}[1]{\parbox[t]{0.46\linewidth}{\centering\rule{\linewidth}{0.4pt}\\\small #1}}
+\firma{Nombres y apellidos del participante}\hfill\firma{Número de celular}\\[1.1cm]
+\firma{Número de cédula}\hfill\firma{Lugar y fecha (dd/mm/aaaa)}\\[1.1cm]
+\firma{Firma del participante}\hfill\firma{Nombre y firma del estudiante que aplica el instrumento}\\[1.1cm]
+\begin{center}\firma{Nombre y firma del testigo (opcional; obligatorio si el formulario se leyó en voz alta)}\end{center}
+
+\clearpage
+\begin{tcolorbox}[enhanced,colback=white,colframe=verde,arc=2mm,boxrule=0.6pt,borderline={0.6pt}{0pt}{verde,dashed},
+  title={\bfseries 9. Revocación del consentimiento (opcional) --- desprendible para el participante},coltitle=white,colbacktitle=verde]
+\setlength{\parskip}{6pt}
+Conserve esta hoja. Si más adelante desea retirarse del estudio, complétela y entréguela a cualquier integrante del equipo o envíe su contenido por correo a los contactos indicados en la primera página.
+
+Yo, \rule{6cm}{0.4pt}, participante con código \rule{2.5cm}{0.4pt}, retiro mi consentimiento para participar en el proyecto UteqFit-AI (sistema de gestión del Gimnasio Universitario - UBU) y solicito:
+
+\hspace{0.5cm}\caja\ Eliminar mis datos identificables (formulario firmado, grabaciones, fotografías).
+
+\hspace{0.5cm}\parbox[t]{0.92\linewidth}{\caja\ Eliminar también mis respuestas anonimizadas, siempre que aún no se hayan integrado en resultados agregados.}
+
+\vspace{1.2cm}
+\firma{Firma}\hfill\firma{Fecha (dd/mm/aaaa)}
+\end{tcolorbox}
+
+\end{document}
