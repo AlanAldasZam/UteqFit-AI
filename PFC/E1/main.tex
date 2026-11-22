@@ -29,7 +29,6 @@
   pdfkeywords={ingeniería de requisitos, elicitación, partes interesadas, UteqFit-AI}
 }
 
-% Encabezado y pie de página
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\small ISR-401 \textperiodcentered{} TA-PFC-E1}
@@ -39,10 +38,8 @@
 \setlength{\headheight}{14pt}
 \fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\small \thepage}\renewcommand{\headrulewidth}{0pt}}
 
-% Evita líneas que se salen del margen
 \setlength{\emergencystretch}{2em}
 
-% Rutas: compila igual desde PFC/E1 (local) o desde la raíz del proyecto (Overleaf)
 \IfFileExists{PFC/E1/main.tex}{\def\rutaE{PFC/E1/}}{\def\rutaE{}}
 \makeatletter
 \def\input@path{{\rutaE}}
@@ -51,11 +48,8 @@
 
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}
 
-% Marca de contenido por completar. Antes de la entrega final no debe quedar ninguna:
-%   grep -rn "pendiente" PFC/E1
 \newcommand{\pendiente}[1]{\textcolor{red}{[PENDIENTE: #1]}}
 
-% Incluye un archivo si ya existe; si no, deja un aviso y el documento compila igual
 \newcommand{\incluir}[1]{\IfFileExists{\rutaE #1.tex}{\input{#1}}{\pendiente{falta subir el archivo \texttt{\detokenize{#1}.tex}}}}
 
 \newcommand{\sistema}{UteqFit-AI}
@@ -64,7 +58,6 @@
 
 \begin{document}
 
-% ---------------- Portada ----------------
 \begin{titlepage}
   \centering
   {\large\bfseries Universidad Técnica Estatal de Quevedo\par}
@@ -100,7 +93,6 @@
 \listoffigures
 \clearpage
 
-% ---------------- Cuerpo (7 secciones de la guía) ----------------
 \section{Organización real}\label{sec:organizacion}
 \incluir{secciones/01_organizacion}
 
@@ -130,7 +122,6 @@
 \bibliographystyle{IEEEtran}
 \bibliography{\rutaE referencias}
 
-% ---------------- Anexos ----------------
 \clearpage
 \appendix
 \section{Guion de entrevista}\label{anx:entrevista}
@@ -142,7 +133,6 @@
 \section{Guía de observación}\label{anx:observacion}
 \incluir{instrumentos/guia_observacion}
 
-% El consentimiento se inserta como PDF cuando ya fue compilado en instrumentos/
 \IfFileExists{\rutaE instrumentos/Consentimiento_Informado_PFC_ISR401.pdf}{%
   \includepdf[pages=-, pagecommand={\thispagestyle{empty}}, addtotoc={1,section,1,Modelo de consentimiento informado,anx:consentimiento}]{\rutaE instrumentos/Consentimiento_Informado_PFC_ISR401.pdf}%
 }{%
