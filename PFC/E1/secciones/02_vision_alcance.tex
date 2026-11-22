@@ -1,15 +1,83 @@
-% Seccion 2 del PFC E1 (Alan). El titulo de la seccion ya esta en main.tex.
-\begingroup
+En esta sección se definen la visión, los objetivos de negocio, el alcance y las restricciones del sistema \textit{UteqFit-AI}. Su contenido parte de los cuatro problemas operativos detectados en la sección anterior y de los hallazgos registrados durante la observación realizada el 18 de noviembre de 2026 en el Gimnasio Universitario.
+
+\subsection{Visión del sistema}
+El sistema propuesto tiene como visión optimizar la gestión operativa y el control de acceso del gimnasio institucional de la Unidad de Bienestar Universitario (UBU), permitiendo el registro digital de usuarios, la reserva de turnos respetando el cupo máximo de 26 usuarios por hora (O2) y la consulta de rutinas básicas de entrenamiento revisadas por el rol que defina la UBU. En su etapa inicial estará dirigido a los estudiantes matriculados, quedando la incorporación de docentes y personal administrativo sujeta a definición institucional (Sección~\ref{sec:partes}).
+
+\subsection{Objetivos de negocio}
+
+En la Tabla~\ref{tab:objetivos} se detallan los objetivos de negocio medibles que guían el desarrollo del sistema.
+
+\begin{table}[htbp]
+\centering
 \small
-\renewcommand{\arraystretch}{1.18}
-\begin{longtable}{|p{1.6cm}|p{11.6cm}|}
-\caption{Lo que queremos lograr}\label{tab:objetivos}\\\hline
-\textbf{Código} & \textbf{Objetivo} \\ \hline
-\endfirsthead
-\hline \textbf{Código} & \textbf{Objetivo} \\ \hline
-\endhead
-ON-01 & Que se inscriban rápido sin hacer fila. \\ \hline
-ON-02 & Que puedan reservar su horario y ver los cupos libres. \\ \hline
-ON-03 & Que la IA les sugiera la rutina, que el entrenador la apruebe y que sus datos de salud estén cuidados. \\ \hline
-\end{longtable}
-\endgroup
+\caption{Objetivos de negocio del sistema de gestión del gimnasio de la UBU}
+\label{tab:objetivos}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{p{1.1cm} p{3.0cm} p{2.8cm} p{2.6cm} p{2.2cm} p{1.7cm}}
+\hline
+\textbf{ID} & \textbf{Objetivo} & \textbf{Indicador} & \textbf{Situación actual} & \textbf{Meta propuesta} & \textbf{Plazo} \\
+\hline
+ON-01 & Agilizar el proceso de inscripción de usuarios al gimnasio. & Tiempo promedio empleado para completar una inscripción (minutos). & Proceso manual en TICs (O1); tiempo base por medir en S-02 y S-03. & $\leq$ 3 min por inscripción. & Piloto (antes de sem. 17, sujeto a UBU). \\
+\hline
+ON-02 & Controlar el cumplimiento de turnos y evitar la permanencia excedida en sala. & Porcentaje de usuarios que permanecen en sala después de finalizado su turno. & Sin control automatizado de salida ni reservas previas; cupo máximo de 26 usuarios/hora (O2). & $\leq$ 5\% de usuarios que permanecen después de su turno. & Piloto (antes de sem. 17, sujeto a UBU). \\
+\hline
+ON-03 & Proveer orientación básica sobre rutinas de entrenamiento a los asistentes. & Porcentaje de solicitudes básicas de rutina atendidas mediante el catálogo del sistema. & Aprox. 4 a 5 solicitudes en 2 h (08h00--10h00), con personal reducido y sin formación en rutinas (O5); sin revisor designado. & $\geq$ 80\% de solicitudes cubiertas (sujeto a que UBU designe revisor). & Piloto (antes de sem. 17, sujeto a UBU). \\
+\hline
+ON-04 & Asegurar la adopción operativa del registro y reserva digital por parte de los usuarios activos. & Porcentaje de accesos diarios al gimnasio gestionados mediante reserva digital autogestionada. & 0\% (el control de ingreso diario se realiza manualmente en recepción, según el afiche informativo). & $\geq$ 70\% de los accesos diarios autogestionados en el sistema. & Piloto (antes de sem. 17, sujeto a UBU). \\
+\hline
+\end{tabular}
+\vspace{0.2cm}
+\begin{flushleft}
+\footnotesize\textit{Nota:} Los valores meta establecidos son propuestas preliminares del equipo de ingeniería de requisitos sujetas a validación con el patrocinador principal (PI-01) en la reunión S-04. Su medición se proyecta mediante una prueba piloto controlada con usuarios antes de la semana 17, condicionada a la autorización institucional de la UBU.
+\end{flushleft}
+\end{table}
+
+\subsection{Frontera del sistema, contexto y alcance}
+Siguiendo el enfoque de delimitación de frontera de \cite{pohlrupp2015}, la Tabla~\ref{tab:alcance} establece los elementos incluidos dentro del sistema, la zona gris pendiente de validación en las próximas sesiones, el contexto externo que no se modifica y los aspectos excluidos del alcance.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Delimitación del alcance y frontera del sistema}
+\label{tab:alcance}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{p{3.6cm} p{10.4cm}}
+\hline
+\textbf{Categoría} & \textbf{Elementos definidos} \\
+\hline
+\textbf{Dentro del sistema} \newline (Alcance funcional y validación) &
+\begin{itemize}[leftmargin=*, nosep, after=\vspace{2pt}]
+    \item Registro digital de usuarios, reemplazando el trámite manual de inscripción que actualmente se gestiona en TICs (O1).
+    \item Gestión de reservas de turnos y control digital de asistencia diaria (reemplazando el registro manual en recepción), respetando el cupo máximo de 26 usuarios por hora (O2).
+    \item Catálogo y consulta de rutinas básicas de entrenamiento general.
+    \item Ejecución de una prueba piloto controlada con usuarios antes de la semana 17 (sujeta a autorización de la UBU) para validar el funcionamiento y medir los objetivos de negocio (Tabla~\ref{tab:objetivos}).
+\end{itemize} \\
+\hline
+\textbf{Zona gris} \newline (Por definir con interesados) &
+\begin{itemize}[leftmargin=*, nosep, after=\vspace{2pt}]
+    \item Incorporación de perfiles y reglas de acceso para docentes y personal administrativo (Sección~\ref{sec:partes}).
+    \item Integración técnica con los servicios de la Unidad de TICs (autenticación única institucional y validación automática de matrícula vigente).
+    \item Designación del rol responsable dentro de la UBU encargado de elaborar, revisar y aprobar las rutinas básicas publicadas en el catálogo.
+\end{itemize} \\
+\hline
+\textbf{Contexto del sistema} \newline (No se modifica) &
+\begin{itemize}[leftmargin=*, nosep, after=\vspace{2pt}]
+    \item Infraestructura física, equipamiento deportivo y horarios de atención vigentes del gimnasio institucional.
+    \item Marco normativo aplicable: reglamentos internos de la UTEQ y Ley Orgánica de Protección de Datos Personales \cite{lopdp2021}.
+\end{itemize} \\
+\hline
+\textbf{Fuera del alcance} \newline (Excluido) &
+\begin{itemize}[leftmargin=*, nosep, after=\vspace{2pt}]
+    \item Registro, almacenamiento o evaluación de lesiones, diagnósticos médicos o datos sensibles de salud de los usuarios, en cumplimiento estricto de la LOPDP \cite{lopdp2021}.
+    \item Despliegue definitivo en producción institucional sobre los servidores centrales de la universidad (el proyecto cubre hasta la especificación de requisitos y la prueba piloto autorizada).
+\end{itemize} \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Restricciones operativas y de negocio}
+\begin{itemize}
+    \item \textbf{Capacidad operativa:} El sistema debe impedir reservas que superen el cupo máximo de 26 usuarios por hora establecido para la sala (O2).
+    \item \textbf{Protección de datos personales:} El tratamiento de los datos de identificación de los estudiantes se regirá por la LOPDP \cite{lopdp2021}, excluyendo expresamente la recolección de historiales clínicos o información sobre lesiones.
+    \item \textbf{Validación previa al cierre:} La ejecución de la prueba piloto antes de la semana 17 y la publicación de rutinas en el catálogo quedan condicionadas a la autorización formal de la UBU y a la asignación del rol revisor correspondiente.
+\end{itemize}
